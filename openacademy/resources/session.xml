@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hexya>
+    <data>
+        <view id="openacademy_session_tree" model="OpenAcademySession">
+            <tree string="Session Tree">
+                <field name="Name"/>
+                <field name="Course"/>
+                <field name="StartDate"/>
+                <field name="TakenSeats" widget="progressbar"/>
+            </tree>
+        </view>
+
+        <view id="openacademy_session_form" model="OpenAcademySession">
+            <form string="Session Form">
+                <header>
+                    <field name="State" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="General">
+                            <field name="Course"/>
+                            <field name="Name"/>
+                            <field name="Instructor"/>
+                        </group>
+                        <group string="Schedule">
+                            <field name="StartDate"/>
+                            <field name="Duration"/>
+                            <field name="Seats"/>
+                            <field name="TakenSeats" widget="progressbar"/>
+                        </group>
+                    </group>
+                    <label for="Attendees"/>
+                    <field name="Attendees"/>
+                </sheet>
+            </form>
+        </view>
+
+        <action id="openacademy_sessions_action" name="Sessions" model="OpenAcademySession"
+                type="ir.actions.act_window" view_mode="tree,form"/>
+
+        <menuitem id="openacademy_session_menu" name="Sessions"
+                  parent="openacademy_menu" action="openacademy_sessions_action"/>
+    </data>
+</hexya>

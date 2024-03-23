@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hexya>
+    <data>
+
+        <!-- Add instructor field to existing view -->
+        <view inherit_id="base_view_partner_form" model="Partner">
+            <notebook position="inside">
+                <page string="Sessions">
+                    <group>
+                        <field name="Instructor"/>
+                        <field name="AttendedSessions"/>
+                    </group>
+                </page>
+            </notebook>
+        </view>
+
+        <action id="openacademy_partners_action" model="Partner"
+                view_mode="tree,form" type="ir.actions.act_window"/>
+
+        <menuitem id="openacademy_configuration_menu" name="Configuration"
+                  parent="openacademy_main_menu"/>
+        <menuitem id="openacademy_contact_menu" name="Contacts"
+                  parent="openacademy_configuration_menu"
+                  action="openacademy_partners_action"/>
+
+    </data>
+</hexya>

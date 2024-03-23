@@ -1,0 +1,30 @@
+Modules = [
+    "github.com/jay009id/hexya-project/openacademy",
+    "github.com/hexya-addons/web"
+]
+LogStdout = true
+#LogFile = ""
+LogLevel = "info"
+Debug = true
+Demo = false
+#DataDir = ""
+
+[DB]
+Driver = "postgres"
+Host = "localhost"
+#Port = 5432
+#User = ""
+#Password = ""
+Name = "hexya"
+#SSLMode = false
+#SSLCert = ""
+#SSLKey = ""
+#SSLCA = ""
+
+[Server]
+Languages = ["all"]
+#Interface = ""
+Port = 9998
+#Domain = ""
+#Certificate = ""
+#PrivateKey = ""
